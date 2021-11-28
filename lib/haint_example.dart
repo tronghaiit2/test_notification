@@ -83,9 +83,8 @@ class MyStatelessWidget extends State<States> {
     androidInit = AndroidInitializationSettings('launch_background');
     iOSInit = IOSInitializationSettings();
     init = InitializationSettings(android: androidInit, iOS: iOSInit);
-    notifications.initialize(init).then((done) {
-      stompClient.activate();
-    });
+    notifications.initialize(init).then((done) {});
+    stompClient.activate();
   }
 
   @override
